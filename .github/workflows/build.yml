@@ -19,9 +19,15 @@ jobs:
           git clone --recursive https://github.com/theos/theos.git $HOME/theos
           echo "THEOS=$HOME/theos" >> $GITHUB_ENV
 
+      - name: Install iOS 10.3 SDK
+        run: |
+          rm -rf "$THEOS/sdks"
+          git clone --depth=1 https://github.com/theos/sdks.git "$THEOS/sdks"
+          ls "$THEOS/sdks/iPhoneOS10.3.sdk"
+
       - name: Build package
         run: |
-          make package FINALPACKAGE=1
+          make clean package FINALPACKAGE=1
 
       - name: Upload DEB
         uses: actions/upload-artifact@v4
