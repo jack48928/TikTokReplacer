@@ -1,0 +1,9 @@
+Package: com.jack.tiktokreplacer
+Name: TikTokReplacer
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Compatibility tweak for legacy TikTok/musical.ly on older iOS devices.
+Maintainer: Jack
+Author: Jack
+Section: Tweaks
+Depends: mobilesubstrate
