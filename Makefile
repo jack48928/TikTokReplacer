@@ -5,6 +5,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = TikTokReplacer
 TikTokReplacer_FILES = Tweak.x
-TikTokReplacer_CFLAGS = -fobjc-arc
+
+TikTokReplacer_CFLAGS = -fobjc-arc -Wno-error=deprecated-module-dot-map
 
 include $(THEOS_MAKE_PATH)/tweak.mk
